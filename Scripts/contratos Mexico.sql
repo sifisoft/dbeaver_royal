@@ -1,0 +1,47 @@
+
+
+
+select ho_hotel, ho_desc, ho_hotel_cancun
+from rshotel;
+
+
+
+select * 
+from frconmaes;
+
+select *
+from frtarifcm
+where ch_hotel = 5 and ch_agencia = 'BESTDI' AND ch_grupo = 'MAR425'
+order by ch_fecha_ini;
+
+select pa_hotel, pa_mayorista, pa_agencia, pa_fecha_ini, pa_fecha_fin, pa_tabla, pa_fecha_apl, pa_fecha_aplf
+from frpromoa
+where pa_hotel = 12 and pa_agencia = 'TURKUTSI' and pa_grupo = 'A' AND '16-MAR-20' between pa_fecha_apl and pa_fecha_aplf;
+
+
+frconmaes_pckg
+
+
+
+
+
+MAESTRO DE PARAMETROS (FRPARAM)
+MAESTRO DE AGENCIAS (FRAGEN)
+MODULOS POR FASE (FRMODFAS / FRMODHOT)
+AUXILIAR DE FECHAS (FRFECHAS)
+TIPOS DE CAMBIO (FRTIPOCA)
+ENCABEZADO DE CONTRATOS (FRCONMAES)
+DETALLE DE CONTRATOS (FRTARIFCM)
+TARIFAS DE PLANES (FRTARIPCM)
+PROMOCIONES (FRPROMOC / FRPROMOA)
+TARIFA MANUAL / INTERFACE (FRESERVAM)
+MAESTRO DE RESERVACIONES (FRESERVA)
+MAESTRO DE PRODUCCION (FRESERVAPR)
+TABLA DE DESGLOSE DE PROPINAS E IMPUESTOS (FRPROPINA / FRDESALL / FRPROPAG)
+TABLA DE DESGLOSE DE IMPUESTOS EN EP (FRDESGLOCE)
+TABLA DE CODIGOS DE TARIFA (FRTIPHAB)
+
+FUNCIONES DE CIELO A IMPLEMENTAR EN TAP PARA CALCULAR LAS RESERVACIONES.
+CALCULA_RESERVACION
+CALCULA_PROMOCION
+DESGLOSE

@@ -1,0 +1,33 @@
+
+
+
+select *
+from rsoperator
+where op_name like '%BOOKING%';
+
+
+select *
+from rsopecharter
+where oc_operator = 'BOKINGAI';
+
+
+select *
+from rscharter
+where ch_charter = 'BKINPOBA';
+
+
+select unique ch_utl
+from rscharter
+where ch_charter in (
+select oc_charter
+from rsopecharter
+where oc_operator = 'BOKINGAI'
+);
+
+update rscharter
+set ch_utl = 'AME'
+where ch_charter in (
+select oc_charter
+from rsopecharter
+where oc_operator = 'BOKINGAI'
+);
