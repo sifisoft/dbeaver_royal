@@ -12,7 +12,7 @@
 				"database": "DBRT",
 				"url": "jdbc:oracle:thin:@//localhost:1821/DBRT",
 				"configurationType": "MANUAL",
-				"type": "prod",
+				"type": "dev",
 				"provider-properties": {
 					"show-only-one-schema@": "false",
 					"@dbeaver-check-schema-content@": "false",
@@ -32,14 +32,14 @@
 		}
 	},
 	"connection-types": {
-		"prod": {
-			"name": "Production",
-			"color": "0,64,128",
-			"description": "Production database",
-			"auto-commit": false,
+		"dev": {
+			"name": "Development",
+			"color": "255,255,255",
+			"description": "Regular development database",
+			"auto-commit": true,
 			"confirm-execute": false,
-			"confirm-data-change": true,
-			"auto-close-transactions": true
+			"confirm-data-change": false,
+			"auto-close-transactions": false
 		}
 	}
 }
